@@ -19,7 +19,7 @@ struct ContentView: View {
             }
             NavigationStack{
                 List(vm.provinceData?.provinces ?? [] , id: \.self){ province in
-                    NavigationLink(destination: EmptyView()){
+                    NavigationLink(destination: ProvinceDetailView(province: province)){
                         Text(province.name ?? "")
                     }
                 }
