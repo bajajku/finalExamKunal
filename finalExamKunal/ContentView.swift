@@ -17,8 +17,17 @@ struct ContentView: View {
             Button("Get data"){
                 vm.getProvinceData()
             }
-            
+            NavigationStack{
+                List{
+                    ForEach(vm.provinceData?.provinces ?? [], id: \.self){ province in
+                        Text(province.name ?? "")
+                        
+                    }
+                    
+                    
+                }
             }
+        }
         }
 }
 
