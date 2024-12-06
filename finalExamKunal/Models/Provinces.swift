@@ -1,5 +1,6 @@
 import Foundation
-struct Provinces : Codable, Hashable, Equatable {
+struct Provinces : Codable, Hashable, Equatable, Identifiable{
+    let id = UUID()
 	let name : String?
 	let capitalCity : CapitalCity?
 	let population : Int?
