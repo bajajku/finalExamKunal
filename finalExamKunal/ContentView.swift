@@ -14,9 +14,6 @@ struct ContentView: View {
         VStack {
             
             Text("Web Services Example ").font(.title)
-            Button("Get data"){
-                vm.getProvinceData()
-            }
             NavigationStack{
                 List(vm.provinceData?.provinces ?? [] , id: \.self){ province in
                     NavigationLink(destination: ProvinceDetailView(province: province)){
@@ -24,6 +21,8 @@ struct ContentView: View {
                     }
                 }
             }
+        }.onAppear{
+            vm.getProvinceData()
         }
         }
 }
