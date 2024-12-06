@@ -18,13 +18,10 @@ struct ContentView: View {
                 vm.getProvinceData()
             }
             NavigationStack{
-                List{
-                    ForEach(vm.provinceData?.provinces ?? [], id: \.self){ province in
+                List(vm.provinceData?.provinces ?? [] , id: \.self){ province in
+                    NavigationLink(destination: EmptyView()){
                         Text(province.name ?? "")
-                        
                     }
-                    
-                    
                 }
             }
         }
