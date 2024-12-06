@@ -13,10 +13,11 @@ struct ProvinceDetailView: View {
     var body: some View {
         VStack {
             Text("Province Detail View").font(.title)
-            Text(province.name ?? "")
-            Text(province.capitalCity?.name ?? "")
-            Text(String(province.population ?? 0) )
-            Text(province.description ?? "")
+            Spacer()
+            Text("Name: \(province.name ?? "")")
+            Text("Capital: \(province.capitalCity?.name ?? "")")
+            Text("Population: \(String(province.population ?? 0))" )
+            Text("Description: \(province.description ?? "") ")
         }
     }
 }
