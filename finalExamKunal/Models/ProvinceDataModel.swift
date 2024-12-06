@@ -4,7 +4,7 @@ struct ProvinceData : Codable {
 	let provinces : [Provinces]?
 
 	enum CodingKeys: String, CodingKey {
-
+        
 		case country = "country"
 		case provinces = "provinces"
 	}

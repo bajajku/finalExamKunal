@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = ProvinceViewModel()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Text("Web Services Example ").font(.title)
+            Button("Get data"){
+                vm.getProvinceData()
+            }
+            
+            }
         }
-        .padding()
-    }
 }
+
 
 #Preview {
     ContentView()

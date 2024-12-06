@@ -6,7 +6,7 @@ struct Provinces : Codable {
 	let description : String?
 
 	enum CodingKeys: String, CodingKey {
-
+        
 		case name = "name"
 		case capitalCity = "capitalCity"
 		case population = "population"

@@ -35,6 +35,7 @@ class ProvinceViewModel : ObservableObject {
             do {
                 
                 let items = try JSONDecoder().decode(ProvinceData.self, from: data)
+                print(items)
                 DispatchQueue.main.async {
                     self.provinceData = items
                 }
